@@ -19,7 +19,7 @@ abstract class RootNavigationState with _$RootNavigationState {
 
 class RootNavigationViewModel extends StateNotifier<RootNavigationState> {
   final AuthService _authService;
-  StreamSubscription<AuthStatus> _authStatusSubscription;
+  StreamSubscription<AuthStatus>? _authStatusSubscription;
 
   RootNavigationViewModel(this._authService)
       : super(RootNavigationState.loading()) {
@@ -41,7 +41,7 @@ class RootNavigationViewModel extends StateNotifier<RootNavigationState> {
   @override
   void dispose() {
     super.dispose();
-    _authStatusSubscription.cancel();
+    _authStatusSubscription?.cancel();
   }
 }
 

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'root_navigation.dart';
 
@@ -9,58 +9,61 @@ part of 'root_navigation.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$RootNavigationStateTearOff {
   const _$RootNavigationStateTearOff();
 
-// ignore: unused_element
   _Loading loading() {
     return const _Loading();
   }
 
-// ignore: unused_element
   _SignedOut signedOut() {
     return const _SignedOut();
   }
 
-// ignore: unused_element
   _SignedIn signedIn() {
     return const _SignedIn();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $RootNavigationState = _$RootNavigationStateTearOff();
 
 /// @nodoc
 mixin _$RootNavigationState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult loading(),
-    @required TResult signedOut(),
-    @required TResult signedIn(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() signedOut,
+    required TResult Function() signedIn,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult loading(),
-    TResult signedOut(),
-    TResult signedIn(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? signedOut,
+    TResult Function()? signedIn,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult loading(_Loading value),
-    @required TResult signedOut(_SignedOut value),
-    @required TResult signedIn(_SignedIn value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_SignedOut value) signedOut,
+    required TResult Function(_SignedIn value) signedIn,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult loading(_Loading value),
-    TResult signedOut(_SignedOut value),
-    TResult signedIn(_SignedIn value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_SignedOut value)? signedOut,
+    TResult Function(_SignedIn value)? signedIn,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -116,26 +119,22 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult loading(),
-    @required TResult signedOut(),
-    @required TResult signedIn(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() signedOut,
+    required TResult Function() signedIn,
   }) {
-    assert(loading != null);
-    assert(signedOut != null);
-    assert(signedIn != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult loading(),
-    TResult signedOut(),
-    TResult signedIn(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? signedOut,
+    TResult Function()? signedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -144,26 +143,22 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult loading(_Loading value),
-    @required TResult signedOut(_SignedOut value),
-    @required TResult signedIn(_SignedIn value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_SignedOut value) signedOut,
+    required TResult Function(_SignedIn value) signedIn,
   }) {
-    assert(loading != null);
-    assert(signedOut != null);
-    assert(signedIn != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult loading(_Loading value),
-    TResult signedOut(_SignedOut value),
-    TResult signedIn(_SignedIn value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_SignedOut value)? signedOut,
+    TResult Function(_SignedIn value)? signedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }
@@ -212,26 +207,22 @@ class _$_SignedOut implements _SignedOut {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult loading(),
-    @required TResult signedOut(),
-    @required TResult signedIn(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() signedOut,
+    required TResult Function() signedIn,
   }) {
-    assert(loading != null);
-    assert(signedOut != null);
-    assert(signedIn != null);
     return signedOut();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult loading(),
-    TResult signedOut(),
-    TResult signedIn(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? signedOut,
+    TResult Function()? signedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signedOut != null) {
       return signedOut();
     }
@@ -240,26 +231,22 @@ class _$_SignedOut implements _SignedOut {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult loading(_Loading value),
-    @required TResult signedOut(_SignedOut value),
-    @required TResult signedIn(_SignedIn value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_SignedOut value) signedOut,
+    required TResult Function(_SignedIn value) signedIn,
   }) {
-    assert(loading != null);
-    assert(signedOut != null);
-    assert(signedIn != null);
     return signedOut(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult loading(_Loading value),
-    TResult signedOut(_SignedOut value),
-    TResult signedIn(_SignedIn value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_SignedOut value)? signedOut,
+    TResult Function(_SignedIn value)? signedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signedOut != null) {
       return signedOut(this);
     }
@@ -307,26 +294,22 @@ class _$_SignedIn implements _SignedIn {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult loading(),
-    @required TResult signedOut(),
-    @required TResult signedIn(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() signedOut,
+    required TResult Function() signedIn,
   }) {
-    assert(loading != null);
-    assert(signedOut != null);
-    assert(signedIn != null);
     return signedIn();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult loading(),
-    TResult signedOut(),
-    TResult signedIn(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? signedOut,
+    TResult Function()? signedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signedIn != null) {
       return signedIn();
     }
@@ -335,26 +318,22 @@ class _$_SignedIn implements _SignedIn {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult loading(_Loading value),
-    @required TResult signedOut(_SignedOut value),
-    @required TResult signedIn(_SignedIn value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_SignedOut value) signedOut,
+    required TResult Function(_SignedIn value) signedIn,
   }) {
-    assert(loading != null);
-    assert(signedOut != null);
-    assert(signedIn != null);
     return signedIn(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult loading(_Loading value),
-    TResult signedOut(_SignedOut value),
-    TResult signedIn(_SignedIn value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_SignedOut value)? signedOut,
+    TResult Function(_SignedIn value)? signedIn,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signedIn != null) {
       return signedIn(this);
     }

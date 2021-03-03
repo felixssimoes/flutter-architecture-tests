@@ -19,7 +19,7 @@ class SignedOut extends StatelessWidget {
             final state = watch(_viewModel.state);
             return state.when(
               loading: () => CircularProgressIndicator(),
-              ready: () => RaisedButton(
+              ready: () => ElevatedButton(
                 onPressed: context.read(_viewModel).signIn,
                 child: Text('Sign In'),
               ),

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'signed_out.viewmodel.dart';
 
@@ -9,49 +9,53 @@ part of 'signed_out.viewmodel.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$SignedOutViewModelStateTearOff {
   const _$SignedOutViewModelStateTearOff();
 
-// ignore: unused_element
   _Loading loading() {
     return const _Loading();
   }
 
-// ignore: unused_element
   _Ready ready() {
     return const _Ready();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $SignedOutViewModelState = _$SignedOutViewModelStateTearOff();
 
 /// @nodoc
 mixin _$SignedOutViewModelState {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult loading(),
-    @required TResult ready(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() ready,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult loading(),
-    TResult ready(),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? ready,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult loading(_Loading value),
-    @required TResult ready(_Ready value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Ready value) ready,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult loading(_Loading value),
-    TResult ready(_Ready value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Ready value)? ready,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -107,23 +111,20 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult loading(),
-    @required TResult ready(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() ready,
   }) {
-    assert(loading != null);
-    assert(ready != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult loading(),
-    TResult ready(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? ready,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -132,23 +133,20 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult loading(_Loading value),
-    @required TResult ready(_Ready value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Ready value) ready,
   }) {
-    assert(loading != null);
-    assert(ready != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult loading(_Loading value),
-    TResult ready(_Ready value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Ready value)? ready,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }
@@ -196,23 +194,20 @@ class _$_Ready implements _Ready {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult loading(),
-    @required TResult ready(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() ready,
   }) {
-    assert(loading != null);
-    assert(ready != null);
     return ready();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult loading(),
-    TResult ready(),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? ready,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (ready != null) {
       return ready();
     }
@@ -221,23 +216,20 @@ class _$_Ready implements _Ready {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult loading(_Loading value),
-    @required TResult ready(_Ready value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Ready value) ready,
   }) {
-    assert(loading != null);
-    assert(ready != null);
     return ready(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult loading(_Loading value),
-    TResult ready(_Ready value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Ready value)? ready,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (ready != null) {
       return ready(this);
     }
