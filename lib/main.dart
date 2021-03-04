@@ -6,7 +6,18 @@ void main() {
   runApp(ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    context.read(authServiceProvider).autoSignIn();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +26,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: RootNavigation(),
+      routes: NavigationService.setupRoutes(context),
+      navigatorKey: context.read(navigationServiceProvider).rootNavigationKey,
     );
   }
 }
