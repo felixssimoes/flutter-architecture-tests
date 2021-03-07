@@ -49,7 +49,7 @@ class AuthService {
 
   Future<void> signIn() async {
     await Future.delayed(const Duration(seconds: 2));
-    final fakeToken = AuthToken(
+    const fakeToken = AuthToken(
       accessToken: 'adfasdfasdf-q23r23-adfasd-23r23',
       tokenType: 'Bearer',
     );

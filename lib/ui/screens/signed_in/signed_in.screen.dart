@@ -11,15 +11,15 @@ class SignedIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Signed In')),
+      appBar: AppBar(title: const Text('Signed In')),
       body: Center(
         child: Consumer(
           builder: (context, watch, child) {
             final model = watch(_viewModel);
-            if (model.isLoading) return CircularProgressIndicator();
+            if (model.isLoading) return const CircularProgressIndicator();
             return ElevatedButton(
               onPressed: context.read(_viewModel).signOut,
-              child: Text('Sign Out'),
+              child: const Text('Sign Out'),
             );
           },
         ),

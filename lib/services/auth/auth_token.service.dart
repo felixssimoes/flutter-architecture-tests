@@ -31,7 +31,7 @@ class AuthTokenService {
   Future<void> loadToken() async {
     final tokenJson =
         await secureStoreService.getSecureValueForKey(_secureStoreTokenKey);
-    if (tokenJson == null) return null;
+    if (tokenJson == null) return;
 
     _token = AuthToken.fromJson(json.decode(tokenJson));
     debugLog('loaded saved session token: $_token');

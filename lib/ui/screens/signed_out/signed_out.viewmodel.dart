@@ -13,10 +13,11 @@ abstract class SignedOutViewModelState with _$SignedOutViewModelState {
 class SignedOutViewModel extends StateNotifier<SignedOutViewModelState> {
   final Reader reader;
 
-  SignedOutViewModel(this.reader) : super(SignedOutViewModelState.ready());
+  SignedOutViewModel(this.reader)
+      : super(const SignedOutViewModelState.ready());
 
   Future<void> signIn() async {
-    state = SignedOutViewModelState.loading();
+    state = const SignedOutViewModelState.loading();
     await reader(authServiceProvider).signIn();
   }
 }
