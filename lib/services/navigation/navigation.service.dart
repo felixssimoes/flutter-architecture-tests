@@ -1,6 +1,6 @@
 import 'package:architecture_tests/ui/screens/app/launch.screen.dart';
 import 'package:architecture_tests/ui/screens/auth/sign_up/sign_up.screen.dart';
-import 'package:architecture_tests/ui/screens/signed_in/signed_in.screen.dart';
+import 'package:architecture_tests/ui/screens/home/stream/home_stream.screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -22,7 +22,7 @@ class NavigationService {
 
   void switchToSignedInLayout() {
     _rootNavigationKey.currentState
-        ?.pushReplacement(_createFadeRouteToScreen(SignedIn()));
+        ?.pushReplacement(_createFadeRouteToScreen(HomeStreamScreen()));
   }
 
   void switchToSignedOutLayout() {

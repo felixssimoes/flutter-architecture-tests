@@ -1,6 +1,7 @@
-import 'package:architecture_tests/ui/screens/signed_in/signed_in.viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'signed_in.viewmodel.dart';
 
 class SignedIn extends StatelessWidget {
   final _viewModel = ChangeNotifierProvider(
