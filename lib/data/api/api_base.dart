@@ -1,12 +1,12 @@
 import 'dart:convert';
 
+import 'package:architecture_tests/services/auth/auth_token.service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:architecture_tests/config/app_config.dart';
 import 'package:architecture_tests/data/models/api/api.models.dart';
-import 'package:architecture_tests/services/auth/auth.service.dart';
 import 'package:architecture_tests/util/log.util.dart';
 
 import 'api_auth.dart';
@@ -37,11 +37,11 @@ class Api {
   final http.Client _client;
   final _basePath = '/api';
   final AppConfig _appConfig;
-  final AuthTokenService _authService;
+  final AuthTokenService _authTokenService;
 
   Api(
     this._appConfig,
-    this._authService, {
+    this._authTokenService, {
     http.Client? client,
   }) : _client = client ?? http.Client();
 
@@ -199,7 +199,7 @@ class Api {
 
   @visibleForTesting
   String? getApiAuth() {
-    final token = _authService.token;
+    final token = _authTokenService.token;
     if (token == null) return null;
     return '${token.tokenType} ${token.accessToken}';
   }

@@ -6,7 +6,7 @@ import 'package:architecture_tests/data/repositories/auth.repository.dart';
 import 'package:architecture_tests/data/types/auth.types.dart';
 import 'package:architecture_tests/services/services.dart';
 
-final authTokenServiceProvider = Provider((_) => AuthTokenService());
+import 'auth_token.service.dart';
 
 // ignore: top_level_function_literal_block
 final authServiceProvider = Provider((ref) {
@@ -16,10 +16,6 @@ final authServiceProvider = Provider((ref) {
     authTokenService: ref.read(authTokenServiceProvider),
   )..autoSignIn();
 });
-
-class AuthTokenService {
-  AuthToken? token;
-}
 
 class AuthService {
   final NavigationService navigator;
@@ -41,7 +37,7 @@ class AuthService {
   }
 
   Future<void> autoSignIn() async {
-    authTokenService.token = await authRepository.loadToken();
+    await authTokenService.loadToken();
     if (authTokenService.token == null) {
       _statusSubject.add(AuthStatus.signedOut);
       navigator.switchToSignedOutLayout();
@@ -53,12 +49,18 @@ class AuthService {
 
   Future<void> signIn() async {
     await Future.delayed(const Duration(seconds: 2));
+    final fakeToken = AuthToken(
+      accessToken: 'adfasdfasdf-q23r23-adfasd-23r23',
+      tokenType: 'Bearer',
+    );
+    authTokenService.setToken(fakeToken);
     _statusSubject.add(AuthStatus.signedIn);
     navigator.switchToSignedInLayout();
   }
 
   Future<void> signOut() async {
     await Future.delayed(const Duration(seconds: 1));
+    authTokenService.setToken(null);
     _statusSubject.add(AuthStatus.signedOut);
     navigator.switchToSignedOutLayout();
   }
