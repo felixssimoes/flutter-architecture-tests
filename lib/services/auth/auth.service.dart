@@ -1,3 +1,5 @@
+import 'package:architecture_tests/data/repositories/user.repository.dart';
+import 'package:architecture_tests/util/log.util.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -14,18 +16,21 @@ final authServiceProvider = Provider((ref) {
     navigator: ref.read(navigationServiceProvider),
     authRepository: ref.read(authRepositorProvider),
     authTokenService: ref.read(authTokenServiceProvider),
+    userRepository: ref.read(userRepositoryProvider),
   )..autoSignIn();
 });
 
 class AuthService {
   final NavigationService navigator;
   final AuthRepository authRepository;
+  final UserRepository userRepository;
   final AuthTokenService authTokenService;
   final _statusSubject = BehaviorSubject.seeded(AuthStatus.unknown);
 
   AuthService({
     required this.navigator,
     required this.authRepository,
+    required this.userRepository,
     required this.authTokenService,
   });
 
@@ -43,8 +48,26 @@ class AuthService {
       navigator.switchToSignedOutLayout();
       return;
     }
+    await userRepository.loadMyProfile();
     _statusSubject.add(AuthStatus.signedIn);
     navigator.switchToSignedInLayout();
+  }
+
+  Future<void> signUp({
+    required String username,
+    required DateTime birthdate,
+  }) async {
+    try {
+      final user = await userRepository.createUser(username, birthdate);
+      final token = await authRepository.signInWithUserId(user.id);
+      authTokenService.setToken(token);
+      _statusSubject.add(AuthStatus.signedIn);
+      navigator.switchToSignedInLayout();
+    } catch (e) {
+      debugLogError('failed to sign user', e);
+      signOut();
+      rethrow;
+    }
   }
 
   Future<void> signIn() async {

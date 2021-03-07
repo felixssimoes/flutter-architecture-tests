@@ -4,10 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'signed_out.viewmodel.dart';
 
 class SignedOut extends StatelessWidget {
-  // ignore: top_level_function_literal_block
-  final _viewModel = StateNotifierProvider((ref) {
-    return SignedOutViewModel(ref.read);
-  });
+  final _viewModel =
+      StateNotifierProvider((ref) => SignedOutViewModel(ref.read));
 
   @override
   Widget build(BuildContext context) {

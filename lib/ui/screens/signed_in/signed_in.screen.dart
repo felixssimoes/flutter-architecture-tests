@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SignedIn extends StatelessWidget {
-  // ignore: top_level_function_literal_block
-  final _viewModel = ChangeNotifierProvider((ref) {
-    return SignedInViewModel(ref.read);
-  });
+  final _viewModel = ChangeNotifierProvider(
+    (ref) => SignedInViewModel(ref.read),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +16,15 @@ class SignedIn extends StatelessWidget {
           builder: (context, watch, child) {
             final model = watch(_viewModel);
             if (model.isLoading) return const CircularProgressIndicator();
-            return ElevatedButton(
-              onPressed: context.read(_viewModel).signOut,
-              child: const Text('Sign Out'),
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(model.username),
+                ElevatedButton(
+                  onPressed: context.read(_viewModel).signOut,
+                  child: const Text('Sign Out'),
+                ),
+              ],
             );
           },
         ),

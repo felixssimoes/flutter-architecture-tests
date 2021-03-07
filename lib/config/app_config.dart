@@ -1,11 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-enum BuildType {
-  local,
-  development,
-  staging,
-  store,
-}
+import 'package:architecture_tests/data/types/app.types.dart';
 
 const devApiHost = 'https://tk8-api.herokuapp.com';
 const stagingApiHost = 'https://tk8-api.herokuapp.com';
