@@ -117,7 +117,7 @@ class Api {
     required String path,
     String? afterCursor,
     String? beforeCursor,
-    required PaginatedListResponseItemParser<T> itemParser,
+    required PaginatedListResponseItemParser<T?> itemParser,
   }) async {
     Map<String, String>? queryParameters;
     final hasAfterCursor = afterCursor != null && afterCursor.isNotEmpty;
@@ -140,9 +140,10 @@ class Api {
     if (data is! List || pagination == null) {
       throw Exception('Invalid response for paginated list');
     }
-    final itemsList = (data as List)
+    final itemsList = data
         .map((item) => itemParser(item))
         .where((item) => item != null)
+        .map((e) => e!)
         .toList();
     return PaginatedListResponse<T>(
       list: itemsList,

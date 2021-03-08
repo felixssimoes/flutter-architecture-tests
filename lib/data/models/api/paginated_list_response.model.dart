@@ -9,4 +9,10 @@ abstract class PaginatedListResponse<T> with _$PaginatedListResponse<T> {
     String? cursor,
     String? nextCursor,
   }) = _PaginatedListResponse<T>;
+
+  factory PaginatedListResponse.initial() => const PaginatedListResponse(
+        list: [],
+        cursor: null,
+        nextCursor: null,
+      );
 }
